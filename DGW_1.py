@@ -1,17 +1,28 @@
-def foofoo(a,b):
-    def foo(a, b):
+def foofoo3_b(a,b):
+    def foo3_a(a, b):
         if a > b:
-            return 1
+            return True
+        elif a==b:
+            global flag
+            flag=True
+            return 7
         else:
-            return 0
-    if foo(a,b)==1:
+            return False
+    if foo3_a(a,b)==True:
         return a
     else:
         return b
+
+flag=False
+
 x=3
-y=2
-a=foofoo(x,y)
-if a==x:
+y=3
+a=foofoo3_b(x,y)
+if a==x and flag==False:
     print(a,'>',y)
+elif flag==True:
+    print (x,'=',y)
 else:
     print(a,'>',x)
+
+print(flag)
