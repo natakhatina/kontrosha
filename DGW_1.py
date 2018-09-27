@@ -8,6 +8,10 @@ def foofoo(a,b):
         return a
     else:
         return b
-
-a=foofoo(3,2)
-print(a)
+x=3
+y=2
+a=foofoo(x,y)
+if a==x:
+    print(a,'>',y)
+else:
+    print(a,'>',x)
