@@ -1,7 +1,8 @@
 def foo(a,b):
     if a>b:
-        print('true')
+        return 1
     else:
-        print('false')
+        return 0
 
-foo(1,2)
+a=foo(0,2)
+print(a)
